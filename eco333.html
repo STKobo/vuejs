@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>eco 33</title>
+    <title>eco 333</title>
 </head>
 <body>
     
     <!-- la View -->
     <div id="app">
-        <p v-text="description"></p>
-        <p v-html="descHtml"></p>
+        <p>Nom : <span v-text="pokemon.name"></span></p>
+        <p>Type : <span v-text="pokemon.type"></span></p>
+        <p>Niveau : <span v-text="pokemon.niveau"></span></p>
     </div>
 
 
@@ -22,15 +23,23 @@
         const app = Vue.createApp({
           data() {
             return {
-               description : "Ce pokemon est rare",
-               descHtml : '<b style= "color: purple"><u> Mewtwo </u></b>',
-
+               pokemon : {
+                name : 'Tortank',
+                type : 'eau',
+                niveau : 50,
+               }
             }
           },
           
           });
 
-        app.mount('#app');
+        const vm = app.mount('#app');
+        // vm.pokemon.name = 'Dracaufeu'
+        setTimeout(
+            () => {
+                vm.pokemon.niveau = 99
+            }, 2500,
+        )
 
     </script>
 
