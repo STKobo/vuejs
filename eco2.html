@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>Demo 2</title>
+    <title>eco 2</title>
 </head>
 <body>
     
     <!-- la View -->
     <div id="app">
-       <h1>{{titre.split(' ').reverse().join(' ')}}</h1>
-       <h2>{{sousTitre.toUpperCase()}}</h2>
-       <h2>{{date}}</h2>
+       <h1>{{dateFr}}</h1>
+       <h2>{{dateUS}}</h2>
+       
     </div>
 
 
@@ -23,12 +23,13 @@
         const app = Vue.createApp({
           data() {
             return {
-               titre : "Les Pokémons et leurs mystères",
-               sousTitre : "Salamèche vs Carapuce",
-               date : new Date().toLocaleTimeString()
+               d: new Date(),
+               dateFr: new Date().toLocaleTimeString(),
+               dateUs: new Date().toLocaleTimeString('en-US')
             }
-          }
-        });
+          },
+          
+          });
 
         app.mount('#app')
 
