@@ -12,8 +12,8 @@
     <!-- la View -->
     <div id="app">
         
-        </select>
-
+       <textarea v-model="area" cols="30" rows="10"></textarea>
+        <h5>{{area}}</h5>
     </div>
 
 
@@ -23,7 +23,7 @@
         const app = Vue.createApp({
           data() {
             return {
-               
+               area: '',
             }
           },
           
