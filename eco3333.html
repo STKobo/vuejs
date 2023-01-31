@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>eco 3333</title>
+</head>
+<body>
+    
+    <!-- la View -->
+    <div id="app">
+        <h1>Vous avez sélectionné {{selection}}</h1>
+        <select v-model="selection">
+            <option>Salamèche</option>
+            <option>Bulbizarre</option>
+            <option>Carapuce</option>
+        </select>
+
+    </div>
+
+
+    <!-- View Model -->
+    <script>
+
+        const app = Vue.createApp({
+          data() {
+            return {
+               selection : ''
+            }
+          },
+          
+          });
+
+        app.mount('#app');
+        
+
+    </script>
+
+
+
+</body>
+</html>
