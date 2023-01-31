@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <title>VueJS</title>
+    <title>Eco1</title>
 </head>
 <body>
     
     <!-- la View -->
     <div id="app">
-
-        <h1>{{titre}}</h1>
-        <h6>{{modele}}</h6>
-
+        <h1>{{pikachu ?  'Pikaaaachu' : 'Ce n\'est pas un Pikachu'}}</h1>
+        
     </div>
 
 
@@ -24,8 +22,7 @@
         const app = Vue.createApp({
           data() {
             return {
-                titre: 'Je suis un titre',
-                modele:  'Air Jordan 4'
+                pikachu : false,
             }
           }
         });
